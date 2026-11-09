@@ -501,70 +501,14 @@
         </div>
     </section>
 
-    <!-- 6. 聯絡我們與交通資訊 Contact & Location -->
+    <!-- 6. 聯絡我們與交通資訊 Contact & Location (改為直接顯示圖片) -->
     <section id="contact" class="py-24 bg-[#0a0a0a] border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-accentGold mb-3">Location & Info</h2>
-                <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">聯絡我們與交通指南</h3>
-                <p class="text-gray-400 text-sm sm:text-base">期待您的光臨，感受最溫暖的炭火串燒人情味。</p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- 聯絡資訊卡片 -->
-                <div class="space-y-6">
-                    <div class="bg-cardDark border border-gray-800 rounded-2xl p-6 flex items-start space-x-4">
-                        <div class="w-12 h-12 rounded-xl bg-accentOrange/10 border border-accentOrange/30 flex items-center justify-center text-accentOrange text-xl shrink-0">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-white mb-1">餐廳地址</h4>
-                            <p class="text-gray-400 text-sm">新北市中和區某某路 100 號</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-cardDark border border-gray-800 rounded-2xl p-6 flex items-start space-x-4">
-                        <div class="w-12 h-12 rounded-xl bg-accentOrange/10 border border-accentOrange/30 flex items-center justify-center text-accentOrange text-xl shrink-0">
-                            <i class="fa-solid fa-clock"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-white mb-1">營業時間</h4>
-                            <p class="text-gray-400 text-sm">週一至週日：17:00 - 00:00 (宵夜場熱鬧開張)</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-cardDark border border-gray-800 rounded-2xl p-6 flex items-start space-x-4">
-                        <div class="w-12 h-12 rounded-xl bg-accentOrange/10 border border-accentOrange/30 flex items-center justify-center text-accentOrange text-xl shrink-0">
-                            <i class="fa-solid fa-phone-volume"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-white mb-1">訂位專線</h4>
-                            <p class="text-gray-400 text-sm">(02) 2928-8888</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Google 地圖模擬框 -->
-                <div class="bg-cardDark border border-gray-800 rounded-3xl overflow-hidden shadow-2xl h-[400px] relative">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.5!2d121.5!3d25.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAwJzAwLjAiTiAxMjHCsDMwJzAwLjAiRQ!5e0!3m2!1szh-TW!2stw!4v1650000000000!5m2!1szh-TW!2stw" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        class="grayscale contrast-125 opacity-80 hover:opacity-100 transition-opacity">
-                    </iframe>
-                    <div class="absolute bottom-4 left-4 right-4 bg-dark/95 backdrop-blur-md p-4 rounded-xl border border-gray-800 flex items-center justify-between">
-                        <div class="flex items-center space-x-3">
-                            <i class="fa-solid fa-train text-accentGold text-xl"></i>
-                            <span class="text-xs sm:text-sm text-gray-300">鄰近捷運站步行約 5 分鐘</span>
-                        </div>
-                        <a href="https://maps.google.com" target="_blank" class="px-3 py-1.5 rounded-lg bg-accentOrange text-white text-xs font-bold hover:bg-amber-600 transition-colors">
-                            導航
-                        </a>
-                    </div>
-                </div>
+            <!-- 圖片容器 -->
+            <div class="max-w-5xl mx-auto rounded-3xl overflow-hidden border border-gray-800 shadow-2xl bg-cardDark">
+                <a href="pic/map.png" target="_blank" class="block w-full cursor-zoom-in">
+                    <img src="pic/map.png" alt="聯絡我們與交通指南" class="w-full h-auto object-contain mx-auto" onerror="this.src='https://placehold.co/1200x680/1a1a1a/d4af37?text=Please+Put+map.png+in+pic+folder';">
+                </a>
             </div>
         </div>
     </section>
