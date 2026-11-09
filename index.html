@@ -33,8 +33,9 @@
             background-color: #0d0d0d;
             color: #e5e5e5;
         }
+        /* 調整 3：調降黑色遮罩透明度，讓背景圖與浮水印變明亮 */
         .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85)), url('pic/hero-bg.jpg') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url('pic/hero-bg.jpg') center/cover no-repeat;
         }
         .gold-glow {
             text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
@@ -111,25 +112,28 @@
     </header>
 
     <!-- 1. 首頁 / 形象區 Hero Section -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center hero-bg pt-20">
-        <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
-        <div class="relative max-w-5xl mx-auto px-4 text-center z-10 py-20">
-            <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-accentOrange/15 border border-accentOrange/30 text-accentOrange text-xs sm:text-sm font-semibold tracking-wider mb-6 animate-pulse">
+    <section id="hero" class="relative min-h-screen flex items-center justify-center hero-bg pt-24 pb-16">
+        <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-transparent to-transparent"></div>
+        <div class="relative max-w-5xl mx-auto px-4 text-center z-10 py-12">
+            <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-accentOrange/20 border border-accentOrange/40 text-accentOrange text-xs sm:text-sm font-semibold tracking-wider mb-6 animate-pulse">
                 <i class="fa-solid fa-star"></i>
                 <span>年度人氣排隊炭火串燒名店</span>
             </div>
-            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
-                匠心炭火，<span class="text-transparent bg-clip-text bg-gradient-to-r from-accentOrange to-accentGold gold-glow">極致肉香</span>
+            <!-- 調整 2：優化標題與上下邊距，避免視覺擁擠 -->
+            <h1 class="text-4xl sm:text-6xl md:text-6xl font-extrabold tracking-tight text-white mb-0 leading-tight drop-shadow-lg">
+                匠心炭火　　<span class="text-transparent bg-clip-text bg-gradient-to-r from-accentOrange to-accentGold gold-glow">　　極致肉香</span>
             </h1>
-            <p class="max-w-2xl mx-auto text-base sm:text-xl text-gray-300 mb-10 font-light leading-relaxed">
-                嚴選新鮮肉品與在地時蔬，搭配獨家秘製醬料，經由炭火直燒完美封存肉汁，為您帶來無與倫比的美味串燒饗宴。
+            <!-- 調整 2：優化內文描述，提升可讀性與對比 -->
+            <p class="max-w-2xl mx-auto text-base sm:text-xl text-gray-200 mb-12 font-medium leading-relaxed drop-shadow">
+                嚴選食材，獨家醬料，炭火直燒，為您帶來無與倫比的美味串燒饗宴。
             </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#reservation" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-accentOrange to-amber-600 text-white font-semibold text-base shadow-xl shadow-accentOrange/20 hover:scale-105 transition-all flex items-center justify-center space-x-3">
+            <!-- 調整 1：讓按鈕在手機與電腦上皆左右分開並保持合適間距 -->
+            <div class="flex flex-row items-center justify-center gap-4 sm:gap-96">
+                <a href="#reservation" class="px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-gradient-to-r from-accentOrange to-amber-600 text-white font-semibold text-sm sm:text-base shadow-xl shadow-accentOrange/30 hover:scale-105 transition-all flex items-center justify-center space-x-2 sm:space-x-3">
                     <i class="fa-regular fa-calendar-check"></i>
                     <span>立即預約座位</span>
                 </a>
-                <a href="#menu-board" class="w-full sm:w-auto px-8 py-4 rounded-full bg-cardDark/80 hover:bg-gray-800 border border-gray-700 text-white font-semibold text-base transition-all flex items-center justify-center space-x-3">
+                <a href="#menu-board" class="px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-cardDark/90 hover:bg-gray-800 border border-gray-600 text-white font-semibold text-sm sm:text-base transition-all flex items-center justify-center space-x-2 sm:space-x-3 shadow-lg">
                     <i class="fa-solid fa-utensils text-accentGold"></i>
                     <span>查看完整菜單</span>
                 </a>
@@ -137,7 +141,7 @@
         </div>
 
         <!-- 向下滾動提示 -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 hidden sm:flex flex-col items-center animate-bounce text-gray-400">
+        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 hidden sm:flex flex-col items-center animate-bounce text-gray-300">
             <span class="text-xs mb-2 tracking-widest uppercase">向下探索</span>
             <i class="fa-solid fa-chevron-down text-accentGold"></i>
         </div>
@@ -189,7 +193,7 @@
         </div>
     </section>
 
-    <!-- 3. 新增：實體菜單圖片展示區 Menu Image Board -->
+    <!-- 3. 實體菜單圖片展示區 Menu Image Board -->
     <section id="menu-board" class="py-24 bg-[#0e0e0e] border-t border-b border-gray-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
@@ -205,7 +209,7 @@
                     <span>點擊圖片可放大</span>
                 </div>
                 
-                <!-- 菜單圖片 (指向 pic/menu.jpg) -->
+                <!-- 菜單圖片 -->
                 <div class="rounded-2xl overflow-hidden border border-gray-700/60 bg-dark flex justify-center items-center">
                     <a href="pic/menu.jpg" target="_blank" class="block w-full cursor-zoom-in">
                         <img src="pic/menu.jpg" alt="滋館平價串燒完整菜單" class="w-full max-h-[850px] object-contain mx-auto transition-transform duration-500 group-hover:scale-[1.01]" onerror="this.src='https://placehold.co/800x1100/1a1a1a/d4af37?text=Please+Put+menu.jpg+in+pic+folder';">
